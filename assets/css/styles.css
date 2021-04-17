@@ -1,0 +1,137 @@
+/* Defined root var */
+:root {
+	--primary-color: rgb(50, 178, 102);
+	--secondary-color: rgb(50, 128, 216);
+	--white-color: #fff;
+	--black-color: #000;
+	--text-color: #333;
+	--border-color: #dbdbdb;
+}
+
+/* Define Button CSS */
+.btn {
+	padding: 8px 24px;
+	text-decoration: none;
+	cursor: pointer;
+	outline: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 2px;
+	border: none;
+}
+
+.btn.btn--primary {
+	color: var(--white-color);
+	background-color: var(--primary-color);
+}
+
+.btn.btn--secondary {
+	color: var(--white-color);
+	background-color: var(--secondary-color);
+}
+
+.btn:hover {
+	filter: brightness(90%);
+}
+
+/* Defined Animation */
+@keyframes growth {
+	from {
+		opacity: 0;
+		transform: scale(var(--growth-from));
+	}
+	to {
+		opacity: 1;
+		transform: scale(var(--growth-to));
+	}
+}
+
+/* Reset CSS */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* App header */
+.app__header {
+	padding: 40px 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--primary-color);
+}
+
+.header__title {
+	text-align: center;
+	color: var(--white-color);
+}
+
+/* App container */
+.app__container {
+	padding: 40px 200px;
+}
+
+.joke {
+	transition: all ease-out 2s;
+}
+
+.joke.joke--hidden {
+	display: none;
+}
+
+.joke__id {
+	display: none;
+}
+
+.joke__content {
+	margin-bottom: 40px;
+	margin: 0 auto;
+	padding: 16px;
+	border-radius: 2px;
+	background-color: var(--border-color);
+	--growth-from: 0.6;
+	--growth-to: 1;
+	animation: growth linear 0.3s;
+	transform-origin: 50% 50%;
+	will-change: opacity;
+}
+
+.joke-action {
+	margin: 0 auto;
+	width: 60%;
+	padding: 40px 56px;
+	display: flex;
+	justify-content: space-evenly;
+}
+
+.joke-action.joke-action--hidden {
+	display: none;
+}
+
+.joke-all-rated {
+	display: none;
+	text-align: center;
+}
+
+.joke-all-rated.joke-all-rated--display {
+	display: block;
+}
+
+.joke-all-rated__message {
+	font-size: 2.2rem;
+	font-weight: 400;
+}
+
+/* App footer */
+.app__footer {
+	padding: 24px 160px;
+	text-align: center;
+	border-top: 1px solid var(--border-color);
+	border-bottom: 1px solid var(--border-color);
+}
+
+.footer__content {
+	margin-bottom: 16px;
+}
