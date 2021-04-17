@@ -1,7 +1,13 @@
 {
-  "name": "fe",
-  "version": "1.0.0",
-  "main": "index.js",
-  "author": "Tan Dang <tandm160797@gmail.com>",
-  "license": "MIT"
+	"name": "fe",
+	"version": "1.0.0",
+	"main": "index.js",
+	"author": "Tan Dang <tandm160797@gmail.com>",
+	"license": "MIT",
+	"devDependencies": {
+		"@babel/cli": "^7.13.0",
+		"@babel/core": "^7.13.8",
+		"@babel/preset-env": "^7.13.9"
+	},
+	"type": "module"
 }
